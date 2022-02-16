@@ -1,0 +1,72 @@
+<html>
+    <script>
+        let table1= ""
+        Name = ""
+        Marks = ""
+        let records=
+            [
+                {
+                    "Name": "Shafeeq",
+                    "Marks": 781,
+                },
+                {
+                    "Name": "Lee",
+                    "Marks": 989,
+                },
+                {
+                    "Name": "Nicola",
+                    "Marks": 123,
+                },
+                {
+                    "Name": "Kerry",
+                    "Marks": 999,
+                },
+            ]; 
+        
+         function displayTable(Name, Marks){
+            let tr1=document.createElement("tr")
+            let td1=document.createElement("td")
+            let td2=document.createElement("td")
+
+            td1.innerHTML= Name
+            td2.innerHTML= Marks
+
+            tr1.appendChild(td1)
+            tr1.appendChild(td2)
+                    
+            table1.appendChild(tr1)
+
+            document.getElementById("Na").value = ""
+            document.getElementById("Marks").value = ""
+         }
+
+         function show(Name, Marks){
+             Na.focus()
+             table1=document.createElement("table")
+             table1.border="1"
+                for (let i=0;i<records.length;i++){
+         
+         displayTable(records[i].Name,records[i].Marks);
+                }
+                document.body.appendChild(table1)
+                }
+
+         function addrecord(Name, Marks){
+             records.push(
+                    {
+                        "Name": Na.value,
+                        "Marks":Marks.value
+                    }
+                )
+        displayTable(Na.value, Marks.value);
+        }
+
+</script>
+<body onload="show(Name, Marks)">
+Name:<input type="'text" id="Na"><br>
+Marks:<input ype="'text" id="Marks"><br>
+<input type="Button" value="Add" onclick="addrecord(Na, Marks)"><br>
+<br>
+<br>
+</body>
+</html>

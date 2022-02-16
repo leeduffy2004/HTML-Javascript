@@ -1,0 +1,67 @@
+<html>
+    <script>
+        function operation(opt){
+            if(txt1.value==""){
+                alert("First number is missing!!")
+                txt1.focus()
+            }
+            else{
+                if(txt2.value==""){
+                    alert("Second number is missing!!")
+                    txt2.focus()
+                }else{
+                    let result = 0
+                    let no1 = txt1.value;
+                    let no2 = txt2.value;
+                    if (opt=="+"){
+                        result = parseInt(no1)+ parseInt(no2);
+                    }
+                    if (opt=="-"){
+                    result = parseInt(no1)- parseInt(no2);
+                    }   
+                    if (opt=="*"){
+                    result = parseInt(no1)* parseInt(no2);
+                    }
+                    if (opt=="/"){
+                    result = parseInt(no1)/ parseInt(no2);
+                    }
+                    txt3.value = result;
+                }
+            }
+        }
+
+
+    </script>
+
+FIRST NUMBER:<input id="txt1" type="text" >
+<br>
+SECOND NUMBER:<input id="txt2" type="text" >
+<br>
+<input 
+    id="btn" 
+    type="Button" 
+    value="+" 
+    onclick="operation('+')">
+
+<input
+    id="btn"
+    type="Button" 
+    value="-" 
+    onclick="operation('-')">
+
+<input
+    id="btn"
+    type="Button" 
+    value="*" 
+    onclick="operation('*')">
+
+<input
+     id="btn"
+     type="Button" 
+     value="/" 
+     onclick="operation('/')"> 
+
+<br>
+RESULT:<input id="txt3" type="text" >
+<br>
+</html>
