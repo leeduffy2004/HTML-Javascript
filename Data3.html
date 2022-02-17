@@ -36,12 +36,12 @@
                     
             table1.appendChild(tr1)
 
-            document.getElementById("Na").value = ""
-            document.getElementById("Marks").value = ""
+            document.getElementById("na").value = ""
+            document.getElementById("marks").value = ""
          }
 
          function show(Name, Marks){
-             Na.focus()
+             na.focus()
              table1=document.createElement("table")
              table1.border="1"
                 for (let i=0;i<records.length;i++){
@@ -54,18 +54,18 @@
          function addrecord(Name, Marks){
              records.push(
                     {
-                        "Name": Na.value,
-                        "Marks":Marks.value
+                        "Name": na.value,
+                        "Marks": marks.value
                     }
                 )
-        displayTable(Na.value, Marks.value);
+        displayTable(na.value, marks.value);
         }
 
 </script>
-<body onload="show(Name, Marks)">
-Name:<input type="'text" id="Na"><br>
-Marks:<input ype="'text" id="Marks"><br>
-<input type="Button" value="Add" onclick="addrecord(Na, Marks)"><br>
+<body onload="show(na, marks)">
+Name: <input type="'text" id="na"><br>
+Marks: <input type="'text" id="marks"><br>
+<input type="Button" value="Add" onclick="addrecord(na, marks)"><br>
 <br>
 <br>
 </body>
