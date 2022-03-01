@@ -1,0 +1,23 @@
+<html>
+<script>
+    function checkData(){
+        if (name1.value==""){
+            alert("You have to Enter your name")
+            return false
+        }else{
+            if (address1.value==""){
+                alert("You have to Enter your address")
+                return false
+            }
+        }
+    }
+</script>
+
+<form action="http://www.Qa.com" onsubmit="return checkData()">
+Enter Your Name: <input type="text" id="name1">
+<br>
+Enter Your Address: <input type="text" id="address1">
+<input type="submit" value="OK" >   
+
+</form>
+</html>

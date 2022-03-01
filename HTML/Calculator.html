@@ -1,0 +1,64 @@
+<html>
+
+<script>
+    let first=0
+    let operator=""
+    function digits(digit){
+        scrn.value+=digit
+    }
+    function clearscreen(){
+        scrn.value=""
+    }
+    function operation(opt){
+        first=parseInt(scrn.value)
+        operator=opt
+        clearscreen()
+    }
+    function result(){
+        if (operator=="+"){
+            scrn.value=first+parseInt(scrn.value)
+        }
+        if (operator=="-"){
+            scrn.value=first-parseInt(scrn.value)
+        }
+        if (operator=="x"){
+            scrn.value=first*parseInt(scrn.value)
+        }
+        if (operator=="/"){
+            scrn.value=first/parseInt(scrn.value)
+        }
+    }
+</script>
+    <table border="'1">
+        <tr>
+            <td colspan="4"> <input type="text" id='scrn' > </td>
+        </tr>
+        <tr>
+            <td> <input type="button" id='n7' value="7" onclick="digits('7')" > </td>
+            <td> <input type="button" id='n8' value="8" onclick="digits('8')" > </td>
+            <td> <input type="button" id='n9' value="9" onclick="digits('9')" > </td>
+            <td> <input type="button" id='bplus' value="+" onclick="operation('+')" > </td>
+        </tr>
+
+        <tr>
+            <td> <input type="button" id='n6' value="6" onclick="digits('6')" > </td>
+            <td> <input type="button" id='n5' value="5" onclick="digits('5')" > </td>
+            <td> <input type="button" id='n4' value="4" onclick="digits('4')" > </td>
+            <td> <input type="button" id='bminus' value="-" onclick="operation('-')" > </td>
+        </tr>
+
+        <tr>
+            <td> <input type="button" id='n3' value="3" onclick="digits('3')" > </td>
+            <td> <input type="button" id='n2' value="2" onclick="digits('2')" > </td>
+            <td> <input type="button" id='n1' value="1" onclick="digits('1')" > </td>
+            <td> <input type="button" id='bmultiply' value="x" onclick="operation('x')" > </td>
+        </tr>
+
+        <tr>
+            <td> <input type="button" id='bclear' value="C" onclick="clearscreen()" > </td>
+            <td> <input type="button" id='n0' value="0" onclick="digits('0')" > </td>
+            <td> <input type="button" id='bclear' value="=" onclick="result()" > </td>
+            <td> <input type="button" id='bdivide' value="/" onclick="operation('/')" > </td>
+        </tr>
+    </table>
+</html>
