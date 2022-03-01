@@ -1,0 +1,36 @@
+<html>
+
+<script>
+    function doSomething(){
+        //alert(document.forms[0].elements.length)
+        //document.forms[0].elements[3].value="Tree";
+        for(let i=0;i<document.forms[0].elements.length;i++){
+            let idd="err"+i
+            let El=document.getElementById(idd);
+            if(document.forms[0].elements[i].value=="" && document.forms[0].elements[i].type=="text"){
+                //alert(" Element Number " +(i+1)+ " is Empty:",)
+                El.innerHTML="** Element Number "+ (i+1) +" is Empty"
+                El.style.visibility="visible"
+                //document.forms[0].elements[i].focus();
+            }else{
+                El.style.visibility="hidden"
+            }
+        }
+    }
+</script>
+
+    <input type="button" onclick="doSomething()"><br>
+<form>
+    <input><span id="err0" style="visibility:hidden;color: red;"> ** can not be Empty </span><br>
+    <input><span id="err1" style="visibility:hidden;color: red;"> ** can not be Empty </span><br>
+    <input><span id="err2" style="visibility:hidden;color: red;"> ** can not be Empty </span><br>
+    <input><span id="err3" style="visibility:hidden;color: red;"> ** can not be Empty </span><br>
+    <input><span id="err4" style="visibility:hidden;color: red;"> ** can not be Empty </span><br>
+    <input><span id="err5" style="visibility:hidden;color: red;"> ** can not be Empty </span><br>
+    <input><span id="err6" style="visibility:hidden;color: red;"> ** can not be Empty </span><br>
+    <input><span id="err7" style="visibility:hidden;color: red;"> ** can not be Empty </span><br>
+    <input><span id="err8" style="visibility:hidden;color: red;"> ** can not be Empty </span><br>
+</form>
+
+
+</html>
